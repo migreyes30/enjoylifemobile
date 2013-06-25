@@ -1,0 +1,43 @@
+.ui-content{
+	height: 100%;
+	min-height: 800px;
+}
+
+.ui-header h1{
+	font-size: 18px;
+}
+
+/* custom icons */
+
+.navFooter .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+.navFooter .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
+#planes .ui-icon {
+	background: url(../img/icons/notepad.png);
+	background-size: 24px 22px;
+	background-repeat: no-repeat;
+}
+
+#historial .ui-icon {
+	background: url(../img/icons/22-skull-n-bones.png);
+	background-size: 24px 22px;
+	background-repeat: no-repeat;
+}
+
+#inbox .ui-icon {
+	background: url(../img/icons/notepad.png);
+	background-size: 24px 22px;
+	background-repeat: no-repeat;
+}
+
+#registro .ui-icon {
+	background: url(../img/icons/22-skull-n-bones.png);
+	background-size: 24px 22px;
+	background-repeat: no-repeat;
+}
+
+#perfil .ui-icon {
+	background: url(../img/icons/22-skull-n-bones.png);
+	background-size: 24px 22px;
+	background-repeat: no-repeat;
+}
