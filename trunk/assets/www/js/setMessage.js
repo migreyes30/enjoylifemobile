@@ -4,7 +4,7 @@ $(document).on('pagebeforeshow', '#registro', function(){
             // Send data to server through ajax call
             // action is functionality we want to call and outputJSON is our data
                 $.ajax({url: IPSERVIDOR + '/enjoylifewebservices/messages/setMessage.php',
-                  data: {hola="ah",datosMensaje : $('#formMessage').serialize()}, // Convert a form to a JSON string representation
+                  data: {datosMensaje : $('#formMessage').serialize()}, // Convert a form to a JSON string representation
                         type: 'post',                   
                         async: true,
                     beforeSend: function() {
