@@ -23,9 +23,11 @@
 
             <div data-role="content" style="height:100%;">   
                 <form id="formMessage" data-ajax="false">
-                    <textarea cols="40" rows="30" name="message" placeholder="Registra" id="message"></textarea>
-                    <input type="hidden" name="token" value="aa1c694bf88ef3a00ad53eb030fd528b">
-                    <input type="hidden" name="user" value="jgordon">
+                    <div data-role="fieldcontain">
+                        <textarea cols="40" rows="30" name="message" placeholder="Registra" id="message"></textarea>
+                    </div>
+                    <input type="hidden" id="token" name="token" value="aa1c694bf88ef3a00ad53eb030fd528b">
+                    <input type="hidden" id="user" name="user" value="jgordon">
                     <input type="submit" id="submit" value="Enviar" data-icon="grid" data-iconpos="right" data-mini="true" />
                 </form>
 
