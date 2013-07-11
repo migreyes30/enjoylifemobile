@@ -4,16 +4,22 @@ $(document).on('pagebeforeshow', '#registro', function(){
             // Send data to server through ajax call
             // action is functionality we want to call and outputJSON is our data
                 $.ajax({url: IPSERVIDOR + '/enjoylifewebservices/messages/setMessage.php',
-                  data: {user: $('#user').val(), token: $('#token').val() ,mensaje : $('#message').val()}, // Convert a form to a JSON string representation
+                  data: {user: $('#user').val(), token: $('#token').val() ,mensaje : $('#message').val() }, // Convert a form to a JSON string representation
                         type: 'post',                   
                         async: true,
                     beforeSend: function() {
                         // This callback function will trigger before data is sent
-                        $.mobile.showPageLoadingMsg(true); // This will show ajax spinner
+                            $.mobile.loading( "show", {
+                                text: "Sending message",
+                                textVisible: true,
+                                theme: $.mobile.loader.prototype.options.theme,
+                                textonly: false,
+                                html: ""
+                            });
                     },
                     complete: function() {
                         // This callback function will trigger on data sent/received complete
-                        $.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
+                        $.mobile.loading( "hide" );
                     },
                     success: function (result) {
                         alert("Your message has been sent");
