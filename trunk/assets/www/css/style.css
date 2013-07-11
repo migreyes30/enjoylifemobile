@@ -4,8 +4,7 @@
 }
 
 .ui-header h1{
-	font-size: 18px;
-	
+	font-size: 24px;
 }
 
 
@@ -43,4 +42,16 @@
 	background: url(../img/icons/22-skull-n-bones.png);
 	background-size: 24px 22px;
 	background-repeat: no-repeat;
+}
+
+.botonSubmit{
+	margin-left: 50px;
+	width: 90%;
+	height: 50px;
+	font-size: 40px;
+
+}
+
+.textoBotonSubmit{
+	font-size: 30px;
 }
