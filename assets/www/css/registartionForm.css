@@ -1,14 +1,32 @@
 .formTitle{
-    font-size: 15px;
+    font-size: 35px;
     margin-left:auto;
     margin-right:auto;
-    width: 45%;
-
+    width: 50%;
 }
 .formLabel{
-    /*font-size: 15px;*/
+    font-size: 30px;
     margin-left:auto;
     margin-right:auto;
-    width: 45%;
-
+    width: 50%;
 }
+.botonSubmit{
+	width: 50%;
+    height: 50px;
+    font-size: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.textoBotonSubmit{
+    font-size: 30px;
+}
+.inputText{
+    height: 35px;
+}
+.submitButton{
+	width: 50%;
+    height: 50px;
+    font-size: 20px;
+    margin-left:auto;
+    margin-right:auto;
+  }

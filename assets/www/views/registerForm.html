@@ -22,23 +22,25 @@
             <div data-role="content" style="height:100%;">
                 
                 <h3 class="formTitle">
-                    Registration Information
+                    Registro de Usuario
                 </h3>
 
-                <form class="formLabel">
+                <form class="formLabel" name="registerFormData">
 
                     <label for="textinput-s">Usuario:</label>
-                    <input type="text" name="usuario" id="usuario" placeholder="Correo electrónico" value="" data-clear-btn="true">
+                    <input type="email" name="usuario" id="usuario" placeholder="Correo electrónico" data-clear-btn="true" class="inputText">
                     <label for="textinput-s">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" value="" data-clear-btn="true">
-
-
-                    <label for="select-native-s">Select:</label>
-                    <select name="select-native-s" id="select-native-s">
-                        <option value="small">One</option>
-                        <option value="medium">Two</option>
-                        <option value="large">Three</option>
-                    </select>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" data-clear-btn="true" class="inputText">
+                    <label for="textinput-s">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Password" data-clear-btn="true" class="inputText">
+                    <label for="textinput-s">Peso:</label>
+                    <input type="number" name="pedo" id="pedo"  pattern="[0-9]*\.[0-9]*" placeholder="Peso Inicial" data-clear-btn="true" class="inputText">
+                    <label for="textinput-s">Talla:</label>
+                    <input type="number" name="talla" id="talla" pattern="[0-9]*\.[0-9]*" placeholder="Talla inicial" data-clear-btn="true" class="inputText">
+                    <br />
+                    <a data-role="button" href="#" rel="external" data-theme="b" class="botonSubmit">
+                        <span class="textoBotonSubmit">Registrar<span>
+                    </a>
 
                 </form>
 
