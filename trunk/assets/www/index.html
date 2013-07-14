@@ -6,46 +6,33 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <title>EnjoyHealth.me</title>
         <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/index.css" />
         <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
         <script type="text/javascript" src="js/config.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/getCurrentPlan.js"></script>
     </head>
     <body>
         <div data-role="page" id="planActual">
 
-            <div data-role="header" data-position="fixed" data-tap-toggle="false"> 
-                <h1>EnjoyHealth.me</h1>
-                <a href="#settingsPopup" data-rel="popup" data-icon="gear" class="ui-btn-right">Opciones</a>
-                <div data-role="navbar">
-                    <ul>
-                        <li><a href="#planActual" class="ui-btn-active">Plan actual</a></li>
-                        <li><a href="views/historialPlanes.html" rel="external">Historial de planes</a></li>
-                    </ul>
-                </div><!-- /navbar -->
-            </div>
-
             <div data-role="content" style="height:100%;">
-                <h1> Plan actual</h1>
-                <div id="planActualDesc">
+                
+                <h1 class="title">
+                    Welcome to EnjoyHealth.me
+                </h1>
 
-                </div>  
+                <div class="loginImgDiv">
+                    <img src="img/bici.jpg" alt="image" class="loginImg">
+                </div>
+
+                <a data-role="button" href="views/registerForm.html" rel="external" data-theme="b" class="botonSubmit">
+                    <span class="textoBotonSubmit">Login<span>
+                </a>
+                <a data-role="button" href="#" data-theme="b" class="botonSubmit">
+                    <span class="textoBotonSubmit">Sign Up<span>
+                </a>
 
             </div><!-- /content -->
-
-            <div data-role="footer" data-position="fixed">      
-                <div data-role="navbar" class="navFooter" role="navigation">
-                    <ul>
-                        <li><a href="#planActual" class="ui-btn-active" rel="external" id="planes" data-icon="custom" data-iconpos="bottom">Planes</a></li>
-                        <li><a href="views/historialPeso.html" rel="external" id="historial" data-icon="custom"  data-iconpos="bottom">Historial</a></li>
-                        <li><a href="views/inbox.html" rel="external" id="inbox" data-icon="custom"  data-iconpos="bottom">Inbox</a></li>
-                        <li><a href="views/registro.html" rel="external" id="registro" data-icon="custom"  data-iconpos="bottom">Registro</a></li>
-                        <li><a href="views/perfil.html" rel="external" id="perfil" data-icon="custom" data-iconpos="bottom">Perfil</a></li>
-                    </ul>
-                </div><!-- /navbar -->
-            </div><!-- /footer -->
 
         </div><!-- /page -->
 
