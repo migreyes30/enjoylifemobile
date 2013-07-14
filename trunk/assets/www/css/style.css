@@ -4,7 +4,13 @@
 }
 
 .ui-header h1{
+	font-size: 40px;
+}
+
+.ui-footer {
 	font-size: 24px;
+	height: 10%;
+	margin-bottom: 0px;
 }
 
 
