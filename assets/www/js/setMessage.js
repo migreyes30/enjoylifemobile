@@ -43,7 +43,10 @@ $(document).ready(function(){
         var getusername = window.location.search;
         getusername = getusername.replace("?username=","");
         setTimeout(function() {
-            $('#message').val("@"+getusername);
+            if(getusername){
+               $('#message').val("@"+getusername); 
+            }
+            
         }, 200);
         
 });
