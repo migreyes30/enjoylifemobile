@@ -4,6 +4,9 @@
     margin-right:auto;
     width: 50%;
 }
+.headerTitle{
+    font-size: 60px;
+}
 .formLabel{
     font-size: 30px;
     margin-left:auto;
@@ -29,4 +32,10 @@
     font-size: 20px;
     margin-left:auto;
     margin-right:auto;
-  }
+}
+#registerFormData label.error {
+	float: right; 
+	color: red; 
+	padding-top: .10em; 
+	vertical-align: top; 
+}
