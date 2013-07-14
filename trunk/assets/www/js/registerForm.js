@@ -20,11 +20,9 @@ $(document).ready(function(){
 	jQuery.fn.submitRegistrationForm = function() {
 
 		var frm = $("#registerFormData");
-		JSON.stringify(frm.serializeArray());
-
-        // action is functionality we want to call and outputJSON is our data
-        $.ajax({url: IPSERVIDOR + SERVICES+'/clients/clientRegistration.php',
-          	data: {
+	
+		/*
+			{
           		token:$('#token').val(),
           		usuario:$('#usuario').val(),
           		nombre:$('#nombre').val(),
@@ -32,7 +30,13 @@ $(document).ready(function(){
           		email:$('#email').val(),
           		peso:$('#peso').val(),
           		talla:$('#talla').val()
-          	}, 
+          	}
+
+		*/
+
+        // action is functionality we want to call and outputJSON is our data
+        $.ajax({url: IPSERVIDOR + SERVICES+'/clients/clientRegistration.php',
+          	data: JSON.stringify(frm.serializeArray()), 
             type: 'post',                   
             async: true,
             beforeSend: function() {
@@ -50,7 +54,7 @@ $(document).ready(function(){
                 $.mobile.loading( "hide" );
             },
             success: function (result) {
-                alert("Your message has been sent");
+                alert("Usuario Registrado");
                 window.location.href="planActual.html";
             },
             error: function (request,error) {
