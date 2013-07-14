@@ -12,14 +12,15 @@
         </script>
         <script type="text/javascript" charset="utf-8" src="../js/cordova.js">
         </script>
-        <script src="../js/iscroll.js" type="text/javascript"></script>    
+        <script src="../js/iscroll.js" type="text/javascript"></script>
+        <script src="../js/config.js" type="text/javascript"></script> 
         <script src="../js/pull.js" type="text/javascript"></script>      
         <style type="text/css">
         
             #wrapper {
                 position:absolute; z-index:1;
                 top:40px;left:-9999px;
-                height: 500px;
+                height: 90%;
                 width:100%;
                 overflow:auto;
             }
@@ -166,14 +167,14 @@
 
     </head>
     <body>
-        <div data-role="page" id="planActual">
+        <div data-role="page" id="inbox">
             <div data-role="header" data-position="fixed" data-tap-toggle="false"> 
                 <h1>EnjoyHealth.me</h1>
                 <a href="#settingsPopup" data-rel="popup" data-icon="gear" class="ui-btn-right">Opciones</a>
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#" class="ui-btn-active" rel="external">Recibidos</a></li>
-                        <li><a href="historialTalla.html" rel="external">Enviados</a></li>
+                        <li><a href="#inbox" class="ui-btn-active" rel="external">Recibidos</a></li>
+                        <li><a href="mensajesEnviados.html" rel="external">Enviados</a></li>
                     </ul>
                 </div><!-- /navbar -->
             </div>
@@ -187,10 +188,6 @@
                        
                         <ul id="publicationList">           
                         </ul>
-                        
-                        <div id="pullUp">
-                            <span class="pullUpIcon"></span><span class="pullUpLabel">Arrastra para cargar m&aacute;s</span>
-                        </div>
                     </div>
                 </div>
 
