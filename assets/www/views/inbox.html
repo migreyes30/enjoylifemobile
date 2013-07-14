@@ -4,35 +4,23 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <title>Enjoy life</title>
+        <title>EnjoyHealth.me</title>
         <link rel="stylesheet" href="../css/jquery.mobile-1.3.1.css" />
         <link rel="stylesheet" href="../css/style.css" />
         <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="../js/jquery.mobile-1.3.1.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="../js/cordova.js"></script>
+        <script type="text/javascript" src="../js/jquery.mobile-1.3.1.min.js">
+        </script>
+        <script type="text/javascript" charset="utf-8" src="../js/cordova.js">
+        </script>
         <script src="../js/iscroll.js" type="text/javascript"></script>    
         <script src="../js/pull.js" type="text/javascript"></script>      
         <style type="text/css">
         
-            
-            body,ul,li {
-                padding:0;
-                margin:0;
-                border:0;
-            }
-
-            body {
-                font-size:12px;
-                -webkit-user-select:none;
-                -webkit-text-size-adjust:none;
-                font-family:helvetica;
-            }
-
             #wrapper {
                 position:absolute; z-index:1;
-                top:40px; bottom:35px; left:-9999px;
+                top:40px;left:-9999px;
+                height: 500px;
                 width:100%;
-                background:#aaa;
                 overflow:auto;
             }
 
@@ -66,8 +54,6 @@
                 position:absolute;
                 top:0; left:0;
             }
-
-
 
             /**
              *
@@ -125,6 +111,7 @@
 
             #publicationList h3{
                 white-space: normal;
+                font-size: 24px;
                 display:block;
                 float:left;
             }
@@ -133,10 +120,11 @@
                 display:block;
                 float:right;
                 text-align: right;
-                font-size:12px;
+                font-size:14px;
                 color: #999999;
             }
             #publicationList p.textoPublicacion{
+                font-size: 24px;
                 clear:both;
             }
 
@@ -174,16 +162,13 @@
              -webkit-box-shadow: none;
             }
 
-
-
         </style>
 
     </head>
     <body>
         <div data-role="page" id="planActual">
-
             <div data-role="header" data-position="fixed" data-tap-toggle="false"> 
-                <h1>Enjoy life</h1>
+                <h1>EnjoyHealth.me</h1>
                 <a href="#settingsPopup" data-rel="popup" data-icon="gear" class="ui-btn-right">Opciones</a>
                 <div data-role="navbar">
                     <ul>
@@ -193,9 +178,8 @@
                 </div><!-- /navbar -->
             </div>
 
-            <div data-role="content" style="height:100%;">   
-
-                <div id="wrapper">
+            <div data-role="content" style="height:100%;">
+                <div id="wrapper" style="min-height:500px">
                     <div id="scroller">
                         <div id="pullDown">
                           <span class="pullDownIcon"></span><span class="pullDownLabel">Arrastra para actualizar</span>
@@ -210,15 +194,13 @@
                     </div>
                 </div>
 
-
-
             </div><!-- /content -->
 
             <div data-role="footer">        
                 <div data-role="navbar" class="navFooter" role="navigation">
                     <ul>
                         <li><a href="../index.html" rel="external" id="planes" data-icon="custom" data-iconpos="bottom">Planes</a></li>
-                        <li><a href="historialPeso.html"  rel="external" id="historial" data-icon="custom"  data-iconpos="bottom">Historial</a></li>
+                        <li><a href="historialPeso.html" rel="external" id="historial" data-icon="custom"  data-iconpos="bottom">Historial</a></li>
                         <li><a href="#inbox" id="inbox" class="ui-btn-active" data-icon="custom"  data-iconpos="bottom">Inbox</a></li>
                         <li><a href="registro.html" rel="external" id="registro" data-icon="custom"  data-iconpos="bottom">Registro</a></li>
                         <li><a href="perfil.html" rel="external" id="perfil" data-icon="custom" data-iconpos="bottom">Perfil</a></li>
