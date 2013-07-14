@@ -1,4 +1,5 @@
 $(document).on('pagebeforeshow', '#registro', function(){
+
         $(document).on('click', '#submit', function(){ // catch the form's submit event
         if($('#message').val().length > 0){
             // Send data to server through ajax call
@@ -36,3 +37,16 @@ $(document).on('pagebeforeshow', '#registro', function(){
             return false; // cancel original event to prevent form submitting
         });    
 });
+
+$(document).ready(function(){
+
+        var getusername = window.location.search;
+        getusername = getusername.replace("?username=","");
+        setTimeout(function() {
+            $('#message').val("@"+getusername);
+        }, 200);
+        
+});
+
+
+
