@@ -9,10 +9,7 @@ $(document).ready(function(){
 		if ($("#registerFormData").valid()) {
 	
 			// Send data to server through ajax call
-			var frm = $("#registerFormData");
- 			JSON.stringify(frm.serializeArray());//($("#registerFormData"))
-
-
+			$(this).submitRegistrationForm();
 
 		}
 
@@ -20,24 +17,28 @@ $(document).ready(function(){
 
 
 	//Validitor function for Form
-	jQuery.fn.submitregistrationForm = function() {
-         // action is functionality we want to call and outputJSON is our data
+	jQuery.fn.submitRegistrationForm = function() {
+
+		var frm = $("#registerFormData");
+		JSON.stringify(frm.serializeArray());
+
+        // action is functionality we want to call and outputJSON is our data
         $.ajax({url: IPSERVIDOR + SERVICES+'/clients/clientRegistration.php',
           	data: {
-          		// Convert a form to a JSON string representation
-          		token: $('#token').val(),
-          		usuario: $('#usuario').val(),
-          		nombre: $('#nombre').val(),
-          		password: $('#password').val(),
-          		peso: $('#peso').val(),
-          		talla: $('#talla').val()
-          		}, 
+          		token:$('#token').val(),
+          		usuario:$('#usuario').val(),
+          		nombre:$('#nombre').val(),
+          		password:$('#password').val(),
+          		email:$('#email').val(),
+          		peso:$('#peso').val(),
+          		talla:$('#talla').val()
+          	}, 
             type: 'post',                   
             async: true,
             beforeSend: function() {
                 // This callback function will trigger before data is sent
                     $.mobile.loading( "show", {
-                        text: "Sending message",
+                        text: "Registrando Usuario " + $("#usuario").val(),
                         textVisible: true,
                         theme: $.mobile.loader.prototype.options.theme,
                         textonly: false,
@@ -50,7 +51,7 @@ $(document).ready(function(){
             },
             success: function (result) {
                 alert("Your message has been sent");
-                window.location.href="inbox.html";
+                window.location.href="planActual.html";
             },
             error: function (request,error) {
                 // This callback function will trigger on unsuccessful action                
@@ -66,8 +67,7 @@ $(document).ready(function(){
 		$("#registerFormData").validate({
 	      	rules: {
 	        	usuario: {
-	            	required: true,
-	      			email: true
+	            	required: true
 	           	},
 	           	nombre: {
 	            	required: true
@@ -75,6 +75,10 @@ $(document).ready(function(){
 	           	password: {
 	            	required: true,
 	            	minlength: 8
+	           	},
+	           	email: {
+	            	required: true,
+	      			email: true
 	           	},
 	           	peso: {
 	            	required: true,
@@ -89,8 +93,7 @@ $(document).ready(function(){
 	        //Validotor Messages for Registration Form
 	        messages: {
 	            usuario: {
-	            	required : "Campo requerido",
-	            	email : "Email no valido"
+	            	required : "Campo requerido"
 	            },
 	           	nombre: {
 	            	required : "Campo requerido"
@@ -99,10 +102,13 @@ $(document).ready(function(){
 	            	required : "Campo requerido",
 	            	minlength : "Al menos 8 catacteres"
 	           	},
+	           	email: {
+	            	required : "Campo requerido",
+	            	email : "Email no valido"
+	            },
 	           	peso: {
 	            	number: "Peso invalido, solamente numeros",
 	            	required : "Campo requerido"
-	            	
 	           	},
 	           	talla: {
 	            	required : "Campo requerido",
