@@ -1,6 +1,15 @@
 $(document).ready(function(){
 
-	
+	/*
+	$('#usuario').val("migue030");
+	$('#nombre').val("Miguel Ramirez");
+	$('#password').val("testtest");
+	$('#email').val("migue030@gmail.com");
+	$('#peso').val(77);
+	$('#talla').val(33);
+	*/
+
+
 	$("#submit").click(function() {
 
 		//Validitor function for Form
@@ -20,9 +29,12 @@ $(document).ready(function(){
 	jQuery.fn.submitRegistrationForm = function() {
 
 		var frm = $("#registerFormData");
-	
-		/*
-			{
+		$("#userMsg").html("");
+
+        // action is functionality we want to call and outputJSON is our data
+        $.ajax({url: IPSERVIDOR + SERVICES+'/clients/clientRegistration.php',
+          	data: 
+          		{
           		token:$('#token').val(),
           		usuario:$('#usuario').val(),
           		nombre:$('#nombre').val(),
@@ -30,13 +42,8 @@ $(document).ready(function(){
           		email:$('#email').val(),
           		peso:$('#peso').val(),
           		talla:$('#talla').val()
-          	}
-
-		*/
-
-        // action is functionality we want to call and outputJSON is our data
-        $.ajax({url: IPSERVIDOR + SERVICES+'/clients/clientRegistration.php',
-          	data: JSON.stringify(frm.serializeArray()), 
+          		}
+          	, 
             type: 'post',                   
             async: true,
             beforeSend: function() {
@@ -54,16 +61,27 @@ $(document).ready(function(){
                 $.mobile.loading( "hide" );
             },
             success: function (result) {
-                alert("Usuario Registrado");
-                window.location.href="planActual.html";
+
+            	if(result.length > 0){
+            		$(this).existingUser();
+            	}else{
+            		window.location.href="planActual.html";	
+            	}
             },
             error: function (request,error) {
                 // This callback function will trigger on unsuccessful action                
-                alert('Network error has occurred please try again!');
+                alert('Un Error en la conexión ocurrio, Intente de nuevo!!');
             }
         });  
 	}
 
+	jQuery.fn.existingUser = function() {
+
+		$("#usuario").focus();
+		$("#usuario").select();
+		$("#userMsg").html("El usuario: " + $('#usuario').val() + " ya existe en el sistema.");
+
+	}
 	//Validitor function for Form
 	jQuery.fn.validateForm = function() {
 	    

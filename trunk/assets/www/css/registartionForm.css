@@ -1,5 +1,5 @@
 .formTitle{
-    font-size: 35px;
+    font-size: 40px;
     margin-left:auto;
     margin-right:auto;
     width: 50%;
@@ -8,10 +8,10 @@
     font-size: 60px;
 }
 .formLabel{
-    font-size: 30px;
+    font-size: 35px;
     margin-left:auto;
     margin-right:auto;
-    width: 50%;
+    width: 60%;
 }
 .botonSubmit{
 	width: 50%;
@@ -24,7 +24,7 @@
     font-size: 30px;
 }
 .inputText{
-    height: 35px;
+    height: 40px;
 }
 .submitButton{
 	width: 50%;
@@ -33,9 +33,19 @@
     margin-left:auto;
     margin-right:auto;
 }
+.ui-content .ui-input-text{
+    font-size: 25px;
+}
+
 #registerFormData label.error {
 	float: right; 
 	color: red; 
 	padding-top: .10em; 
 	vertical-align: top; 
+}
+.userMsg {
+    float: right; 
+    color: red; 
+    padding-top: .10em; 
+    vertical-align: top; 
 }

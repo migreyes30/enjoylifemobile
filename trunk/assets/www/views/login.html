@@ -13,8 +13,9 @@
         <script type="text/javascript" src="../lib/jquery.validate.min.js"></script>
 
         <script type="text/javascript" src="../js/config.js"></script>
+        <!--
         <script type="text/javascript" src="../js/registerForm.js"></script>
-        
+        -->
 
     </head>
     <body>
@@ -27,7 +28,7 @@
             <div data-role="content" style="height:100%;">
                 
                 <h3 class="formTitle">
-                    Registro de Usuario
+                    Auntenticación de Usuario
                 </h3>
 
                 <form class="formLabel" name="registerFormData" id="registerFormData">
@@ -38,20 +39,9 @@
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario" data-clear-btn="true" class="inputText">
                     <label id="userMsg" class="userMsg"></label>
 
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" data-clear-btn="true" class="inputText">
-
                     <label for="password">Password:</label>
                     <input type="password" name="password" id="password" placeholder="Password" data-clear-btn="true" class="inputText">
-
-                    <label for="usuario">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Correo electrónico" data-clear-btn="true" class="inputText">
-
-                    <label for="peso">Peso:</label>
-                    <input type="number" name="peso" id="peso"  placeholder="Peso Inicial" data-clear-btn="true" class="inputText">
-
-                    <label for="talla">Talla:</label>
-                    <input type="number" name="talla" id="talla" placeholder="Talla inicial" data-clear-btn="true" class="inputText">
+                    <label id="userMsg" class="userMsg"></label>
 
                     <br />
                     <a data-role="button" href="#" id="submit" rel="external" data-theme="b" class="botonSubmit">
