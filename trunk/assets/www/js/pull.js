@@ -1,35 +1,24 @@
-var listSelector = "#publicationList .ui-listview",
-		lastTimestamp = 0,
-		myScroll,
-		pullDownEl, pullDownOffset;
-		
 $(document).bind('pageinit', function(){
-	
-	$.mobile.loading( 'show', {
-		text: "Cargando publicaciones...",
-		textVisible: true,
-		theme: 'a',
-		textonly: true,
-		html: ''
-	});
+
+	var myScroll;
+	var pullDownEl;
+	var pullDownOffset;
+		
+
 
 	$("#wrapper").css("margin-top", "0px").show();
 
-		if(myScroll){
-			myScroll.destroy();
-			myScroll=null;
-		}
+	if(myScroll){
+		myScroll.destroy();
+		myScroll=null;
+	}
 
 
-		loaded();
-		
-		gotPullDownData();	
+	loaded();
+	
+	gotPullDownData();	
 	
 });
-
-function replyUser(username){
-	     $.mobile.changePage("registro.html", { data: { "usuario" : username  } });
-}
 
 function loaded() {
 	pullDownEl = document.getElementById('pullDown');
@@ -81,6 +70,16 @@ function gotPullDownData() {
 	$.ajax({
 		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessages.php?token=aa1c694bf88ef3a00ad53eb030fd528b&username=jgordon',
 		dataType:"jsonp",
+        beforeSend: function() {
+            // This callback function will trigger before data is sent
+			$.mobile.loading( 'show', {
+				text: "Cargando publicaciones...",
+				textVisible: true,
+				theme: 'a',
+				textonly: false,
+				html: ''
+			});
+        },		
 		success: function(d, status) {
 			$('#publicationList').html("");
 			if(d.response.length>0){

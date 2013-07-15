@@ -1,15 +1,14 @@
-var listSelector = "#publicationList .ui-listview",
-		lastTimestamp = 0,
-		myScroll,
-		pullDownEl, pullDownOffset;
-		
 $(document).bind('pageinit', function(){
+
+	var myScroll;
+	var pullDownEl;
+	var pullDownOffset;
 	
 	$.mobile.loading( 'show', {
 		text: "Cargando publicaciones...",
 		textVisible: true,
 		theme: 'a',
-		textonly: true,
+		textonly: false,
 		html: ''
 	});
 
@@ -26,10 +25,6 @@ $(document).bind('pageinit', function(){
 		gotPullDownData();	
 	
 });
-
-function replyUser(username){
-	     $.mobile.changePage("registro.html", { data: { "usuario" : username  } });
-}
 
 function loaded() {
 	pullDownEl = document.getElementById('pullDown');
@@ -79,8 +74,18 @@ function gotPullDownData() {
 	var newHtml="";
 	
 	$.ajax({
-		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessagesSent.php?token=aa1c694bf88ef3a00ad53eb030fd528b&username=jgordon',
+		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessagesSent.php?token=aa1c694bf88ef3a00ad53eb030fd528b&username=jegordon',
 		dataType:"jsonp",
+        beforeSend: function() {
+            // This callback function will trigger before data is sent
+			$.mobile.loading( 'show', {
+				text: "Cargando publicaciones...",
+				textVisible: true,
+				theme: 'a',
+				textonly: false,
+				html: ''
+			});
+        },			
 		success: function(d, status) {
 			$('#publicationList').html("");
 			if(d.response.length>0){
@@ -92,7 +97,6 @@ function gotPullDownData() {
 					newHtml+="<p class='fechaDerecha'>"+item.date+"</p>";
 					newHtml+="<p class='textoPublicacion'>"+item.message+"</p>";
 					newHtml+="</li>";
-					lastTimestamp=item['_id']['$id'];	
 				});
 			}
 			else{
