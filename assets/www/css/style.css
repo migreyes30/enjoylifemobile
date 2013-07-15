@@ -3,8 +3,22 @@
 	min-height: 800px;
 }
 
-.ui-header h1{
-	font-size: 40px;
+.ui-header .ui-title {
+    font-size: 28px;
+    padding: 5px;
+}
+
+#message{
+	width: 100%;
+}
+
+.ui-header .ui-btn-text {
+    font-size: 22px;
+    padding: 5px;
+}
+
+.ui-grid-a .ui-btn-text{
+	font-size: 24px;
 }
 
 .ui-footer {
@@ -13,7 +27,10 @@
 	margin-bottom: 0px;
 }
 
-
+.ui-footer .ui-btn-text {
+    font-size: 25px;
+    padding: 5px;
+}
 
 /* custom icons */
 
@@ -22,44 +39,43 @@
 
 #planes .ui-icon {
 	background: url(../img/icons/notepad.png);
-	background-size: 24px 22px;
+	background-size: 30px 28px;
 	background-repeat: no-repeat;
 }
 
 #historial .ui-icon {
 	background: url(../img/icons/22-skull-n-bones.png);
-	background-size: 24px 22px;
+	background-size: 30px 28px;
 	background-repeat: no-repeat;
 }
 
 #inbox .ui-icon {
 	background: url(../img/icons/notepad.png);
-	background-size: 24px 22px;
+	background-size: 30px 28px;
 	background-repeat: no-repeat;
 }
 
 #registro .ui-icon {
 	background: url(../img/icons/22-skull-n-bones.png);
-	background-size: 24px 22px;
+	background-size: 30px 28px;
 	background-repeat: no-repeat;
 }
 
 #perfil .ui-icon {
 	background: url(../img/icons/22-skull-n-bones.png);
-	background-size: 24px 22px;
+	background-size: 30px 28px;
 	background-repeat: no-repeat;
 }
 
 .botonSubmit{
 	margin-left: 50px;
 	width: 90%;
-	height: 50px;
+	height: 80px;
 	font-size: 40px;
-
 }
 
 .textoBotonSubmit{
-	font-size: 30px;
+	font-size: 40px;
 }
 
 #responder .ui-icon {

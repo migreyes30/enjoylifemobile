@@ -1,4 +1,4 @@
-$(document).on('pagebeforeshow', '#registro', function(){
+$(document).on('pageinit', '#registro', function(){
 
         $(document).on('click', '#submit', function(){ // catch the form's submit event
         if($('#message').val().length > 0){
@@ -47,7 +47,7 @@ $(document).ready(function(){
                $('#message').val("@"+getusername); 
             }
             
-        }, 200);
+        }, 300);
         
 });
 
