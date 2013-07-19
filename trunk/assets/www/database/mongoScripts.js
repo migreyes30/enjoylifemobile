@@ -7,8 +7,19 @@ db.clientes.insert({
 	"peso":"99",
 	"talla":"100",
 	"planActual":"plan1"
-
 })
+
+db.clientes.insert({
+	"usuario":"jgordon",
+	"nombre":"Juan Gordon2",
+	"password":"123456",
+	"email":"jgordon87@gmail.com",
+	"fechaRegistro":"2013-06-25",
+	"peso":"89",
+	"talla":"120",
+	"planActual":"plan1"
+})
+
 
 
 db.plans.insert({

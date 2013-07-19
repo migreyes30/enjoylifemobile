@@ -1,4 +1,7 @@
-IPSERVIDOR = 'http://localhost/~Mike30';
+//IPSERVIDOR = 'http://54.235.245.127';
+IPSERVIDOR = 'http://192.168.1.14';
+
+//IPSERVIDOR = 'http://localhost/~Mike30';
 /*
 --Localost
 IPSERVIDOR = 'http://localhost/~Mike30'

@@ -74,7 +74,7 @@ function gotPullDownData() {
 	var newHtml="";
 	
 	$.ajax({
-		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessagesSent.php?token=aa1c694bf88ef3a00ad53eb030fd528b&username=jegordon',
+		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessagesSent.php?token=aa1c694bf88ef3a00ad53eb030fd528b&username=jgordon',
 		dataType:"jsonp",
         beforeSend: function() {
             // This callback function will trigger before data is sent
@@ -90,12 +90,15 @@ function gotPullDownData() {
 			$('#publicationList').html("");
 			if(d.response.length>0){
 				$.each(d.response, function(i,item){ 
-					
+					var mensaje = item.message;
+					if(item.registroPeso){
+						var mensaje = item.message.replace("#peso","<span style='color:blue'> #peso </span>");
+					}					
 					newHtml+="<li style='background: url(stylesheets/images/greenbg.png) repeat-y #FFFFFF;' >";
 					
 					newHtml+="<h3>"+item.username+"</h3>";
 					newHtml+="<p class='fechaDerecha'>"+item.date+"</p>";
-					newHtml+="<p class='textoPublicacion'>"+item.message+"</p>";
+					newHtml+="<p class='textoPublicacion'>"+mensaje+"</p>";
 					newHtml+="</li>";
 				});
 			}
