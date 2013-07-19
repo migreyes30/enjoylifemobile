@@ -6,7 +6,8 @@ $(document).on('pageinit', '#registro', function(){
             // action is functionality we want to call and outputJSON is our data
                 $.ajax({url: IPSERVIDOR + '/enjoylifewebservices/messages/setMessage.php',
                   data: {user: $('#user').val(), token: $('#token').val() ,mensaje : $('#message').val() }, // Convert a form to a JSON string representation
-                        type: 'post',                   
+                        type: 'post',
+                        dataType : 'json',                 
                         async: true,
                     beforeSend: function() {
                         // This callback function will trigger before data is sent
@@ -28,7 +29,7 @@ $(document).on('pageinit', '#registro', function(){
                     },
                     error: function (request,error) {
                         // This callback function will trigger on unsuccessful action                
-                        alert('Network error has occurred please try again!');
+                        alert('Network error has occurred please try again!' + error);
                     }
                 });  
         } else {
