@@ -104,11 +104,13 @@ $(document).ready(function(){
 	           	},
 	           	peso: {
 	            	required: true,
-	            	number: true
+	            	number: true,
+	            	maxlength: 3
 	           	},
 	           	talla: {
 	            	required: true,
-	            	number: true
+	            	number: true,
+	            	maxlength: 2
 	           	}
 
 	        },
@@ -130,11 +132,13 @@ $(document).ready(function(){
 	            },
 	           	peso: {
 	            	number: "Peso invalido, solamente numeros",
-	            	required : "Campo requerido"
+	            	required : "Campo requerido",
+	            	maxlength : "Peso Invalido, no mayor a 3 digitos"
 	           	},
 	           	talla: {
 	            	required : "Campo requerido",
-	            	number : "Talla invalido, solamente numeros"
+	            	number : "Talla invalido, solamente numeros",
+	            	maxlength: "Talla Invalido, no mayor a 2 digitos"
 	           	}
 	        }
      	});
