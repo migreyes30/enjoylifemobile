@@ -48,10 +48,10 @@
                     <input type="email" name="email" id="email" placeholder="Correo electrónico" data-clear-btn="true" class="inputText">
 
                     <label for="peso">Peso:</label>
-                    <input type="number" name="peso" id="peso"  placeholder="Peso Inicial" data-clear-btn="true" class="inputText">
+                    <input type="number" name="peso" id="peso"  pattern="[0-9]{3}" maxlength="3" placeholder="Peso Inicial" data-clear-btn="true" class="inputText">
 
                     <label for="talla">Talla:</label>
-                    <input type="number" name="talla" id="talla" placeholder="Talla inicial" data-clear-btn="true" class="inputText">
+                    <input type="number" name="talla" id="talla" pattern="[0-9]{2}" maxlength="2" placeholder="Talla inicial" data-clear-btn="true" class="inputText">
 
                     <br />
                     <a data-role="button" href="#" id="submit" rel="external" data-theme="b" class="botonSubmit">
