@@ -5,9 +5,9 @@ $(document).bind('pageinit', function(){
 	var pullDownOffset;
 	
 	$.mobile.loading( 'show', {
-		text: "Cargando publicaciones...",
+		text: "Cargando mensajes ...",
 		textVisible: true,
-		theme: 'a',
+		theme: $.mobile.loader.prototype.options.theme,
 		textonly: false,
 		html: ''
 	});
@@ -74,14 +74,14 @@ function gotPullDownData() {
 	var newHtml="";
 	
 	$.ajax({
-		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessagesSent.php?token=aa1c694bf88ef3a00ad53eb030fd528b&username=jgordon',
+		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessagesSent.php?token=aa1c694bf88ef3a00ad53eb030fd528b&username='+USUARIO,
 		dataType:"jsonp",
         beforeSend: function() {
             // This callback function will trigger before data is sent
 			$.mobile.loading( 'show', {
-				text: "Cargando publicaciones...",
+				text: "Cargando mensajes ...",
 				textVisible: true,
-				theme: 'a',
+				theme: $.mobile.loader.prototype.options.theme,
 				textonly: false,
 				html: ''
 			});
@@ -108,7 +108,7 @@ function gotPullDownData() {
 		},
 		error: function(){
 			newHtml="";
-			alert("There was an error loading the feed");
+			alert("Error de conexión con el servidor, prueba más tarde");
 		},
 		complete: function(){
 			$('#publicationList').append(newHtml);
