@@ -1,0 +1,51 @@
+.formTitle{
+    font-size: 40px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+}
+.headerTitle{
+    font-size: 60px;
+}
+.formLabel{
+    font-size: 35px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 60%;
+}
+.botonSubmit{
+	width: 50%;
+    height: 50px;
+    font-size: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.textoBotonSubmit{
+    font-size: 30px;
+}
+.inputText{
+    height: 40px;
+}
+.submitButton{
+	width: 50%;
+    height: 50px;
+    font-size: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.ui-content .ui-input-text{
+    font-size: 25px;
+}
+
+#LoginFormData label.error {
+	float: right; 
+	color: red; 
+	padding-top: .10em; 
+	vertical-align: top; 
+}
+.userMsg {
+    float: right; 
+    color: red; 
+    padding-top: .10em; 
+    vertical-align: top; 
+}

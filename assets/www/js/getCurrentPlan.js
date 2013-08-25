@@ -1,6 +1,9 @@
 $(document).bind('pageinit', function(){
+
+	var jsonObject = $.cookie("userLogged");
+
 	$.ajax({
-		url: IPSERVIDOR +'/enjoylifewebservices/plans/getCurrentPlan.php?token=aa1c694bf88ef3a00ad53eb030fd528b',
+		url: IPSERVIDOR +'/enjoylifewebservices/plans/getCurrentPlan.php?token='+TOKEN_ID,//aa1c694bf88ef3a00ad53eb030fd528b',
 		dataType:"jsonp",
         beforeSend: function() {
             // This callback function will trigger before data is sent
