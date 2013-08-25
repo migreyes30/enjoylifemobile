@@ -1,7 +1,7 @@
 $(document).ready(function(){
       var arreglosPeso = [];
       $.ajax({
-        url: IPSERVIDOR + '/enjoylifewebservices/history/getWeightTrend.php?token=aa1c694bf88ef3a00ad53eb030fd528b&callback=a&usuario='+USUARIO,
+        url: IPSERVIDOR + '/enjoylifewebservices/history/getWeightTrend.php?token='+TOKEN_ID+'&callback=a&usuario='+USUARIO,
         dataType:"jsonp",
         success: function(data, status) {
 
