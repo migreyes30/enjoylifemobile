@@ -11,7 +11,7 @@ $(document).bind('pageinit', function(){
 function cargarPlanActual(){
 
 	$.ajax({
-		url: IPSERVIDOR +'/enjoylifewebservices/plans/getCurrentPlan.php?token=' + TOKEN + '&usuario=' +USUARIO,
+		url: IPSERVIDOR +'/enjoylifewebservices/plans/getCurrentPlan.php?token=' + TOKEN_ID + '&usuario=' +USUARIO,
 		dataType:"jsonp",
         beforeSend: function() {
             // This callback function will trigger before data is sent
@@ -48,7 +48,7 @@ function cargarPlanActual(){
 
 function setStartPlan(){
 	$.ajax({
-		url: IPSERVIDOR +'/enjoylifewebservices/plans/startPlanProgram.php?token=' + TOKEN + '&usuario=' +USUARIO,
+		url: IPSERVIDOR +'/enjoylifewebservices/plans/startPlanProgram.php?token=' + TOKEN_ID + '&usuario=' +USUARIO,
 		dataType:"jsonp",
         beforeSend: function() {
             // This callback function will trigger before data is sent

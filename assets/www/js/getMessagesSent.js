@@ -74,7 +74,7 @@ function gotPullDownData() {
 	var newHtml="";
 	
 	$.ajax({
-		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessagesSent.php?token=aa1c694bf88ef3a00ad53eb030fd528b&username='+USUARIO,
+		url: IPSERVIDOR + '/enjoylifewebservices/messages/getMessagesSent.php?token='+TOKEN_ID+'&username='+USUARIO,
 		dataType:"jsonp",
         beforeSend: function() {
             // This callback function will trigger before data is sent
