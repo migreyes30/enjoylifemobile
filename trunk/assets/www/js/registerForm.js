@@ -1,15 +1,5 @@
 $(document).ready(function(){
 
-	/*
-	$('#usuario').val("migue030");
-	$('#nombre').val("Miguel Ramirez");
-	$('#password').val("testtest");
-	$('#email').val("migue030@gmail.com");
-	$('#peso').val(77);
-	$('#talla').val(33);
-	*/
-
-
 	$("#submit").click(function() {
 
 		//Validitor function for Form
