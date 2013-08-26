@@ -22,48 +22,50 @@ $(document).ready(function(){
 		$("#userMsg").html("");
 
         // action is functionality we want to call and outputJSON is our data
-        $.ajax({url: IPSERVIDOR + SERVICES+'/clients/clientLogin.php',
-          	data: 
-          		{
-          		token:$('#token').val(),
-          		usuario:$('#usuario').val(),
-          		password:$('#password').val(),
-          		}
-          	,
-          	dataType: "jsonp", 
-            type: 'post',                   
-            async: true,
-            beforeSend: function() {
-                // This callback function will trigger before data is sent
-                    $.mobile.loading( "show", {
-                        text: "Iniciando con Usuario " + $("#usuario").val(),
-                        textVisible: true,
-                        theme: $.mobile.loader.prototype.options.theme,
-                        textonly: false,
-                        html: ""
-                    });
-            },
-            complete: function() {
-                // This callback function will trigger on data sent/received complete
-                $.mobile.loading( "hide" );
-            },
-            success: function (result) {
+        $.ajax({
 
-            	if(result.logged){
+        		url: IPSERVIDOR + SERVICES+'/clients/clientLogin.php',
+          		data: 
+	          		{
+	          		token:$('#token').val(),
+	          		usuario:$('#usuario').val(),
+	          		password:$('#password').val(),
+	          		},
+          		dataType: "json", 
+            	type: 'post',                   
+            	async: true,
+            	beforeSend: function() {
+                	// This callback function will trigger before data is sent
+	                    $.mobile.loading( "show", {
+	                        text: "Iniciando con Usuario " + $("#usuario").val(),
+	                        textVisible: true,
+	                        theme: $.mobile.loader.prototype.options.theme,
+	                        textonly: false,
+	                        html: ""
+	                    });
+           			},
+            	complete: function() {
+		                // This callback function will trigger on data sent/received complete
+		                $.mobile.loading( "hide" );
+            		},
+            	success: function (result) {
 
-            		//$.cookie("userLogged", result);
+		            	if(result.logged){
 
-            		window.location.href="planActual.html";	
+		            		//$.mobile.loadPage('planActual.html')
+		            		//$.mobile.changePage('#planActual')
+		            		window.location.href=planActual.html";	
 
-            	}else{
+		            	}else{
 
-            		$(this).wrongInfo(result.message);
-            	}
-            },
-            error: function (request,error) {
-                // This callback function will trigger on unsuccessful action                
-                alert('Un Error en la conexión ocurrio, Intente de nuevo!!');
-            }
+		            		$(this).wrongInfo(result.message);
+		            	}
+            		},
+            	error: function (request,error) {
+		                // This callback function will trigger on unsuccessful action
+						console.log(error);
+		                alert('Un Error en la conexión ocurrio, Intente de nuevo!!');
+            		}
         });  
 	}
 
