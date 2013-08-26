@@ -23,6 +23,13 @@ $(document).ready(function(){
           var plot2 = $.jqplot ('chart2', [arreglosPeso], {
               // Give the plot a title.
               title: 'Tendencia de peso',
+               axesDefaults: {
+                  tickRenderer: $.jqplot.CanvasAxisTickRenderer ,
+                  tickOptions: {
+                    angle: -50,
+                    fontSize: '10pt'
+                  }
+              },             
               // You can specify options for all axes on the plot at once with
               // the axesDefaults object.  Here, we're using a canvas renderer
               // to draw the axis label which allows rotated text.
@@ -33,7 +40,9 @@ $(document).ready(function(){
               axes: {
                 // options for each axis are specified in seperate option objects.
                 xaxis:{
+                  label: "Fecha",                  
                   renderer:$.jqplot.DateAxisRenderer
+
                 },
                 yaxis: {
                   label: "Peso"

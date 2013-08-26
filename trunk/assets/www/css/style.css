@@ -124,6 +124,32 @@ body {
 	background-repeat: no-repeat;
 }
 
+.listaHistoriaPlanes{
+	height: 60px;
+	font-size: 35px;
+	margin-left: 10px;
+	padding-left: 40px;
+	padding-top: 20px;
+	width: 50%;
+	color: white;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffa1a1), color-stop(1, #f52525) );
+	background:-moz-linear-gradient( center top, #ffa1a1 5%, #f52525 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa1a1', endColorstr='#f52525');
+	background-color:#ffa1a1;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;	
+	margin-top: 10px;	
+}
 
 .botonIniciaPlan {
 	cursor: pointer;
