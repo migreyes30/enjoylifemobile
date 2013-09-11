@@ -10,8 +10,10 @@ $(document).bind('pageinit', function(){
 
 function cargarPlanActual(){
 
+	var userSession = localStorage.getItem('userDB');
+
 	$.ajax({
-		url: IPSERVIDOR +'/enjoylifewebservices/plans/getCurrentPlan.php?token=' + TOKEN_ID + '&usuario=' +USUARIO,
+		url: IPSERVIDOR +'/enjoylifewebservices/plans/getCurrentPlan.php?token=' + TOKEN_ID + '&usuario=' +userSession,
 		dataType:"jsonp",
         beforeSend: function() {
             // This callback function will trigger before data is sent
