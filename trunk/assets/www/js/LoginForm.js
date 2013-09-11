@@ -52,18 +52,24 @@ $(document).ready(function(){
 
 		            	if(result.logged){
 
-		            		//$.mobile.loadPage('planActual.html')
-		            		//$.mobile.changePage('#planActual')
-		            		window.location.href=planActual.html";	
-
+		            		localStorage.setItem("userDB", result.userInDB);
+		            		$.mobile.changePage('planActual.html',	{ 
+		            													reloadPage: true, 
+		            													transition: "slideup"
+		            												}
+		            							);
+		            		/*
+								localStorage.setItem("userDB", result.userInDB);
+								localStorage.getItem('userDB');
+								localStorage.removeItem('userDB');
+		            		*/
 		            	}else{
-
 		            		$(this).wrongInfo(result.message);
 		            	}
             		},
             	error: function (request,error) {
 		                // This callback function will trigger on unsuccessful action
-						console.log(error);
+						//console.log(error);
 		                alert('Un Error en la conexión ocurrio, Intente de nuevo!!');
             		}
         });  
